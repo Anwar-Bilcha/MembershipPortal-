@@ -59,18 +59,18 @@ namespace MembershipPortal.Controllers
         }
 
 
-        [HttpGet]
-        [Route("{id}")]
-        public async Task<IActionResult> GetMember(Guid id)
-        {
-             var member = await _memberRepository.GetMember(id);
-            if (member == null)
-                return NotFound();
-            var memberasList = new List<Member>();
-            memberasList.Add(member);
-            var memberDto = Member2MemberDto(memberasList);
-            return Ok(memberDto);
-        }
+        //[HttpGet]
+        //[Route("{id}")]
+        //public async Task<IActionResult> GetMember(Guid id)
+        //{
+        //     var member = await _memberRepository.GetMember(id);
+        //    if (member == null)
+        //        return NotFound();
+        //    var memberasList = new List<Member>();
+        //    memberasList.Add(member);
+        //    var memberDto = Member2MemberDto(memberasList);
+        //    return Ok(memberDto);
+        //}
 
 
 
